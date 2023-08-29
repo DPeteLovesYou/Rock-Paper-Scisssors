@@ -29,7 +29,7 @@ p {
 }
 
 button {
-  font-size: 20px;
+  font-size: 25px;
   width: 250px;
   height: 250px;
   margin: 20px;
@@ -40,4 +40,10 @@ button {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  transition: .5s;
+}
+
+button:hover {
+  background-color: #e08c9e;
+  scale: 1.1;
 }
