@@ -62,35 +62,35 @@ function playRound(playerSelection, computerSelection) {
     let computerScore = 0;
     let gameNumber = 0;
 
-    for (i = gameNumber; i < 5; i++) {
-      computerSelection = getComputerChoice();
-      playerInput = prompt("Rock, Paper or Scissors??");
-      playerSelection = capitalize(playerInput);
+    // for (i = gameNumber; i < 5; i++) {
+    //   computerSelection = getComputerChoice();
+    //   playerInput = prompt("Rock, Paper or Scissors??");
+    //   playerSelection = capitalize(playerInput);
   
-      let loseMessage = `You Lose! ${computerSelection} beats ${playerSelection}`;
-      let winMessage = `You Win! ${playerSelection} beats ${computerSelection}`;
-      let tieMessage = `It's a Tie!`;
+    //   let loseMessage = `You Lose! ${computerSelection} beats ${playerSelection}`;
+    //   let winMessage = `You Win! ${playerSelection} beats ${computerSelection}`;
+    //   let tieMessage = `It's a Tie!`;
   
-      first = playRound(playerSelection, computerSelection);
-      if (first == "Win") {
-        playerScore++
-        console.log(winMessage);
-        console.log(`Your score is ${playerScore}, the computer score is ${computerScore}`)
-      } else if (first == "Lose") {
-        computerScore++
-        console.log(loseMessage);
-        console.log(`Your score is ${playerScore}, the computer score is ${computerScore}`);
-      } else {
-        console.log(tieMessage);
-        console.log(`Your score is ${playerScore}, the computer score is ${computerScore}`);
-      }
-    }
+    //   first = playRound(playerSelection, computerSelection);
+    //   if (first == "Win") {
+    //     playerScore++
+    //     console.log(winMessage);
+    //     console.log(`Your score is ${playerScore}, the computer score is ${computerScore}`)
+    //   } else if (first == "Lose") {
+    //     computerScore++
+    //     console.log(loseMessage);
+    //     console.log(`Your score is ${playerScore}, the computer score is ${computerScore}`);
+    //   } else {
+    //     console.log(tieMessage);
+    //     console.log(`Your score is ${playerScore}, the computer score is ${computerScore}`);
+    //   }
+    // }
 
-    if (playerScore == computerScore) {
-      console.log("You tied with the computer!!")
-    } else if (playerScore > computerScore) {
-      console.log("Victory! You beat the computer")
-    } else {
-      console.log("You Lost! Computers are smart")
-    }
+    // if (playerScore == computerScore) {
+    //   console.log("You tied with the computer!!")
+    // } else if (playerScore > computerScore) {
+    //   console.log("Victory! You beat the computer")
+    // } else {
+    //   console.log("You Lost! Computers are smart")
+    // }
   }
