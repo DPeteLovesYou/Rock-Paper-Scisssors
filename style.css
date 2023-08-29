@@ -5,10 +5,11 @@ html, body{
 
 body {
   display: flex;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: rgba(225, 167, 18, 0.309);
+  background-color: #E0DFD5;
 }
 
 .buttonContainer {
@@ -17,8 +18,26 @@ body {
   align-items: center;
 }
 
+img {
+  margin-bottom: 10px;
+}
+
+p {
+  font-size: 40px;
+  margin-bottom: 100px;
+  color: #313638;
+}
+
 button {
-  width: 200px;
-  height: 200px;
+  font-size: 20px;
+  width: 250px;
+  height: 250px;
   margin: 20px;
+  background-color: #B56576;
+  border: none;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
