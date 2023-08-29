@@ -1,3 +1,18 @@
+const btnRock = document.querySelector('#Rock');
+btnRock.addEventListener('click', () => {
+  alert("Rock");
+})
+
+const btnPaper = document.querySelector('#Paper');
+btnPaper.addEventListener('click', () => {
+  alert("Paper");
+})
+
+const btnScissors = document.querySelector('#Scissors');
+btnScissors.addEventListener('click', () => {
+  alert("Scissors");
+})
+
 //Create outside variables to pass to the playRound function
 let computerSelection 
 let playerInput 
@@ -20,8 +35,6 @@ function capitalize(playerInput) {
 
   return playerInputStandardized;
 }
-
-console.log(game());
 
 function playRound(playerSelection, computerSelection) {
   //Check if player selection matches rock, then paper, then scissors
@@ -50,12 +63,6 @@ function playRound(playerSelection, computerSelection) {
 }
 
   //Create a function called game() that keeps score of a 5 round game and reports a winner or loser at the end. 
-
-  //Call the playRound function 5 times
-  //Use console.log() to display win/lose message after each round
-  //Keep a computer score and a player score based on win messages
-  //Compare computer and player score and return win/lose/tie message via 
-  //console.log()
   
   function game() {
     let playerScore = 0;
