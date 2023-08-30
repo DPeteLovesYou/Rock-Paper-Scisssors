@@ -122,21 +122,15 @@ function endGame() {
 
   const playAgain = document.createElement('button')
   playAgain.classList.add('playAgain')
+  playAgain.style.cssText = 'width: 200px; height: 100px; background-color: orange;'
   playAgain.textContent = 'Play Again?'
 
   container.appendChild(playAgain);
-}
 
-// Create arrays of win/lose/tie splash messages
-// Create a function to pull one randomly
-// Create a function to update the splash message div
-// When player clicks a button, run the playRound()
-// Based on the result, update and display the player/computer score variables
-// Also call the splash message update function
-// Create a listener for when a score = 5??
-// Display final score splash
-// Remove the event listeners
-// Add a 'play again' button to refresh the page
+  playAgain.addEventListener ('click', () => {
+    location.reload();
+  })
+}
 
 function getWinSplash() {
   const options = ["I can't believe it!!", "You're cheating, aren't you", "I let you have that one", "Think about your own mortality...let it distract you", "My next choice will be Paper...or will it?", "Computers don't feel pain", "You gloat, and yet you're living in a simulation. You're like my nephew or something"]
