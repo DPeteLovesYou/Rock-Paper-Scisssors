@@ -8,66 +8,23 @@ let finalLose = "All according to plan!! You lost!!! Better luck next time, clow
 
 const btnRock = document.querySelector('#Rock');
 btnRock.addEventListener('click', () => {
-  computerSelection = getComputerChoice();
-  let game = playRound("Rock", computerSelection)
-  if (game == "Win") {
-    playerScore++;
-    splashMessage = getWinSplash();
-  } else if (game == "Lose") {
-    computerScore++;
-    splashMessage = getLoseSplash();
-  } else {
-    splashMessage = getTieSplash();
-  }
-
-  updateScores();
-  setSplash();
-  showComputerChoice();
-
-  if (playerScore == 5) {
-    splashMessage = finalWin
-    setSplash();
-    endGame();
-  } else if (computerScore == 5) {
-    splashMessage = finalLose
-    setSplash();
-    endGame();
-  }
-})
+  oneRound("Rock");
+});
 
 const btnPaper = document.querySelector('#Paper');
 btnPaper.addEventListener('click', () => {
-  computerSelection = getComputerChoice();
-  let game = playRound("Paper", computerSelection);
-  if (game == "Win") {
-    playerScore++;
-    splashMessage = getWinSplash();
-  } else if (game == "Lose") {
-    computerScore++;
-    splashMessage = getLoseSplash();
-  } else {
-    splashMessage = getTieSplash();
-  }
-
-  updateScores();
-  setSplash();
-  showComputerChoice();
-
-  if (playerScore == 5) {
-    splashMessage = finalWin
-    setSplash();
-    endGame();
-  } else if (computerScore == 5) {
-    splashMessage = finalLose
-    setSplash();
-    endGame();
-  }
+  oneRound("Paper");
 })
 
 const btnScissors = document.querySelector('#Scissors');
 btnScissors.addEventListener('click', () => {
+  oneRound("Scissors");
+})
+
+function oneRound(choice) {
+  playerSelection = choice;
   computerSelection = getComputerChoice();
-  let game = playRound("Scissors", computerSelection);
+  let game = playRound(playerSelection, computerSelection)
   if (game == "Win") {
     playerScore++;
     splashMessage = getWinSplash();
@@ -91,7 +48,7 @@ btnScissors.addEventListener('click', () => {
     setSplash();
     endGame();
   }
-})
+}
 
 function updateScores() {
   let pScoreDis = document.querySelector('#playerScore');
