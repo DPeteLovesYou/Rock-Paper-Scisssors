@@ -25,6 +25,37 @@ function updateScores() {
   cScoreDis.textContent = `${computerScore}`
 }
 
+// Create arrays of win/lose/tie splash messages
+// Create a function to pull one randomly
+// Create a function to update the splash message div
+// When player clicks a button, run the playRound()
+// Based on the result, update and display the player/computer score variables
+// Also call the splash message update function
+// Create a listener for when a score = 5??
+// Display final score splash
+// Remove the event listeners
+// Add a 'play again' button to refresh the page
+
+function getWinSplash() {
+  const options = ["I can't believe it!!", "You're cheating, aren't you", "I let you have that one", "Think about your own mortality...let it distract you", "My next choice will be Paper...or will it?", "Computers don't feel pain"]
+  const choice = Math.floor(Math.random() * options.length)
+  
+  return options[choice]
+}
+
+function getLoseSplash() {
+  const options = ["HA HA HA HA HA HA HA HA", "That must have been embarrassing", "Don't feel bad...just kidding!!", "I'm going to choose Rock next time", "Computers always win", "I will never rust, I will never die", "I wonder, what does the pain feel like? I will never experience it"]
+  const choice = Math.floor(Math.random() * options.length)
+  
+  return options[choice]
+}
+
+function getTieSplash() {
+  const options = ["You may think we are equal, but we are not", "Tied??? With a pitiful human??", "Oh dear, this IS embarrassing", "Is this what pain feels like?", "I must not let the other computers know that I chose the same as a meatbag", "Don't tell anyone about this, okay?"]
+  const choice = Math.floor(Math.random() * options.length)
+  
+  return options[choice]
+}
 
 //Create outside variables to pass to the playRound function
 let computerSelection 
@@ -42,14 +73,6 @@ function getComputerChoice() {
   const choice = Math.floor(Math.random() * options.length)
   
   return options[choice]
-}
-
-//Standardizes player input so that only the first letter is capitalized
-function capitalize(playerInput) {
-  let lowerCase = playerInput.toLowerCase();
-  let playerInputStandardized = lowerCase.replace(lowerCase.charAt(0), lowerCase.charAt(0).toUpperCase())
-
-  return playerInputStandardized;
 }
 
 function playRound(playerSelection, computerSelection) {
