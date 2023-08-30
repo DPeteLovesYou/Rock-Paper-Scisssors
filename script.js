@@ -1,22 +1,29 @@
 const btnRock = document.querySelector('#Rock');
 btnRock.addEventListener('click', () => {
-  alert("Rock");
+  computerSelection = getComputerChoice();
+  console.log(playRound("Rock", computerSelection));
 })
 
 const btnPaper = document.querySelector('#Paper');
 btnPaper.addEventListener('click', () => {
-  alert("Paper");
+  computerSelection = getComputerChoice();
+  console.log(playRound("Paper", computerSelection));
 })
 
 const btnScissors = document.querySelector('#Scissors');
 btnScissors.addEventListener('click', () => {
-  alert("Scissors");
+  computerSelection = getComputerChoice();
+  console.log(playRound("Scissors", computerSelection));
 })
+
 
 //Create outside variables to pass to the playRound function
 let computerSelection 
 let playerInput 
 let playerSelection 
+let playerScore = 0;
+let computerScore = 0;
+let gameNumber = 0;
 
 // Create an array with the three options
 // Select an option at random
