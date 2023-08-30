@@ -80,3 +80,7 @@ button:hover {
   background-color: #e08c9e;
   scale: 1.1;
 }
+
+#computerChoiceContainer {
+  margin-top: 100px;
+}
