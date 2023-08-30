@@ -40,6 +40,11 @@ p {
   text-align: center;
 }
 
+#playerScore,
+#computerScore {
+  font-size: 40px;
+}
+
 .buttonContainer {
   display: flex;
   justify-content: space-around;

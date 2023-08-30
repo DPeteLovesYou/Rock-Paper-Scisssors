@@ -2,6 +2,7 @@ const btnRock = document.querySelector('#Rock');
 btnRock.addEventListener('click', () => {
   computerSelection = getComputerChoice();
   console.log(playRound("Rock", computerSelection));
+  updateScores();
 })
 
 const btnPaper = document.querySelector('#Paper');
@@ -15,6 +16,14 @@ btnScissors.addEventListener('click', () => {
   computerSelection = getComputerChoice();
   console.log(playRound("Scissors", computerSelection));
 })
+
+function updateScores() {
+  let pScoreDis = document.querySelector('#playerScore');
+  pScoreDis.textContent = `${playerScore}`
+
+  let cScoreDis = document.querySelector('#computerScore');
+  cScoreDis.textContent = `${computerScore}`
+}
 
 
 //Create outside variables to pass to the playRound function
